@@ -36,24 +36,29 @@
         </section>
     </body>
     <script type="text/javascript">
-        
+
         function calculate(){
-            
+            querySelector('.options');
+
         //Query select your information
         let price;
+            const doc = document;
+            let input = doc.querySelector('options');
+            let Calculator = doc.querySelector('button');
+            Calculator.addEventListner('click',function())
         let shippingType;
         let shippingLocation;
-        
-        //conditionally choose the shipping tax    
+
+        //conditionally choose the shipping tax
         let shippingTax;
         let tax10000 = ['Peoria','Arlington Heights','Schaumburg','Evanston','Palatine'];
-        
+
         if(tax10000.includes(shippingLocation)){
             //think about it
         }
-            
-            
-            
+
+
+
         }
     </script>
 </html>
