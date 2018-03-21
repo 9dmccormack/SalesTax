@@ -1,20 +1,31 @@
-# Illinois Sales Tax Calculator
-The price of goods and services changes base on where you purchase it.  The cost of living is artificial/relative. Your goal is to create a little calculator widget that will compute the total cost depending on where you buy your good/service and the amount of course.
+# Button JS
+The goal of this project is to complete scripts which enable all of the desired features of the buttons on the HTML webpage; there are 5 challenges in total.  Here is the general strategy you should use to approach each problem:
+-  Examine the project in the browser.  Get a feel for the space before concerning yourself with the code.
+-  Examine the CSS file and see what classes and ids already exist.  Hint: you may want to add your own in the future to solve a challenge.
+-  Add a function to each buttons "onclick" attribute.  You are responsible for naming the function.
+-  Scroll to the bottom of the HTML page, name your 5 functions first with proper syntax and attack each one at a time.
+-  Don't forget to save code in atom before running in the browser and make sure to refresh the page before trying to click the button you are working on.
 
-This [tax link](https://www.taxjar.com/states/illinois-sales-tax-online/#do-you-have-sales-tax-nexus-in-illinois) has the information on various cities shipping tax rates.  Here is a short list of useful statistics from the website.
--  Illinois Tax Rate: 6.25%
--  Minimum Shipping Rate: 7.50%
--  Maximum Shipping Rate: 10.25%
+## Notes
+Consult the notes we took last week for tips on vocabulary and proper syntax.
 
-## Total cost
-It should be noted that the total cost of the item is found by taking the price of the item and multiplying by the sales tax.  If there is shipping, which we will assume happens in all cases, then you need to add the cost of shipping and handling multiplied by the shipping tax from its location.
+## Challenge 1
+When you click this button the color of the h3 heading and the p-tag should change to white.  Also to help with the contract of the picture you should change the background color to black.  You will want to perform at least 3 separate queries to complete the overall task.  Consider adding some utility classes to the css file to help.
+## Challenge 2
+Take it to the next level of user experience; create another class which houses the old default settings and toggle a "daymode" and "nightmode" mode to switch between color settings.
+## Challenge 3
+This challenge represents an internal family Gaussian Diagram...not a Venn Diagram.
+- **gp** stands for grand parent (rgb: #550000)
+- **p** stands for parent (rbg: #991100)
+- **c** stands for child (rgb: #dd1111)
 
-## Shipping
-Your shipping should be a function of two variables: the type and the location.  You should use the radio input type for the type of shipping variable and a text input for location.
--  type of shipping: standard = $2.99; priority = $4.99; express = $8.99
--  location: choose the name of the city.
-## Your Program Goals
--  Make sure your widget has the correct number of input and types of input fields to grab the necessary data.
--  In the javascript, use query selectors to store the information in variables
--  Do some math with the variables to calculate the total cost
--  display the answer to your selection in the span element.
+
+To show that the genes get passed on down through the generations we will change the background color from a dark red to lighter shades of red.  Use three different query selectors to alter the diagram.  Again, you may find adding some classes to the css file helpful.
+
+## Challenge 4
+Dr. Suess would like his list of character to be appropriately colored.  Out of the list select the red fish and the blue fish and change their text colors to be congruent with their names.  You will want to use a query selector to grab the characters.  At this point you should have an array of answers, more than you need in fact.  Use your knowledge of array notation to change the css of only two fish we care about.
+-  let firstfish = array[0];
+- let somefish = array[some number];
+
+## Challenge 5
+Just like the Fake Twitter examples where I added 1 to the like count, activate these two buttons to add to the span element with an initial value of 20 in this challenge.
