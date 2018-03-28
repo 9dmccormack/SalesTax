@@ -21,9 +21,9 @@
                 <div class="options">
                     <label>Shipping</label><br><br>
                     <select id="shipping" name="">
-                    <option value="standard">Standard</option>
-                    <option value="priority">Priority</option>
-                    <option value="express">Express</option>
+                    <option class = "boxtype" value="standard">Standard</option>
+                    <option class = "boxtype" value="priority">Priority</option>
+                    <option class = "boxtype" value= "express">Express</option>
                 </select>
                 </div>
                 <div class="options">
@@ -41,14 +41,19 @@
 
         function calculate(){
             const doc=document;
-            let price = doc.querySelector("#cost");
+            let price = doc.querySelector("#cost").value;
             let cost = Number(price);
-            let shippingType = doc.querySelectorAll("#shipping");
+            let shippingType = doc.querySelector("#shipping").value;
+            if(shippingType == 'standard'){
+                type = 2.99;
+            }
+            else if(shippingType == 'priority'){
+                type = 4.99;
+            }
+            else if (shippingType == 'express') {
+                type = 8.99;
 
-                if(shipping[0].includes(shippingType)){
-
-                }
-            let shippingLocation = doc.querySelector("#location");
+            let shippingLocation = doc.querySelector("#location").value;
             let answer = doc.querySelector('#answer');
 
             let shippingTax;
@@ -85,10 +90,9 @@
             else if(tax10250.includes(shippingLocation)){
                 shippingTax = shippingType*1.1025;
             }
-            
+
             let totalCost = cost*1.0625 + (shippingType + shippingTax);
-            let pineapple = "$" + totalCost;
-            let final = answer.innerHTML = pineapple;
+            answer.innerHTML = "$" + totalCost;
 
         }
     </script>
